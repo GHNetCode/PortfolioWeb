@@ -41,7 +41,7 @@
   #menu__toggle {
     position: fixed;
     top: 20px;
-    left: 26vmax;
+    left: 26px;
     width: 15px;
     height: 15px;
     cursor: pointer;
@@ -69,7 +69,7 @@
     position: fixed;
     top: 20px;
     /* left: 20px; */
-    left: 26vmax;
+    left: 26px;
     width: 15px;
     height: 15px;
     cursor: pointer;
@@ -99,7 +99,7 @@
     display: block;
     position: fixed;
     top: -145vh;
-    left: 25vmax;
+    left: 20px;
     width: 200px;
     height: 50%;
     margin: 0;
