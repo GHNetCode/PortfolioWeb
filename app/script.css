@@ -20,10 +20,117 @@
 
 
 
+
+  body{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 1280px;
+    width: 100vw;
+    min-width: 400px;
+    max-width: 700px;
+    /* background: #dddee1; */
+    background-color: #99999c;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    /* border: red 1px solid; */
+  }
+ 
+
+
+  #menu__toggle {
+    position: fixed;
+    top: 20px;
+    left: 26px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 5;
+    /* border: green 1px solid; */
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    /* left: 0 !important; */
+    /* left: 0; */
+    display: block;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    /* left: 20px; */
+    left: 26px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 3;
+    /* border: red 1px solid; */
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 6px;
+    background-color: #688d8c;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -6px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 6px;
+  }
+  .menu__box {
+    display: none;/*none / block*/
+    position: fixed;
+    /* top: -145vh; */
+    left: 20px;
+    width: 200px;
+    height: 50%;
+    margin: 0;
+    padding: 80px 0;
+    border-radius:15px;
+    list-style: none;
+    background-image: linear-gradient(to top, rgba(132, 134, 151, 0.95) , rgba(205, 213, 246, 0.95));
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3 );
+    transition-duration: .25s;
+    z-index: 2;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+
+
   #animatemeid_Btn,.circTxt{
     display: flex;
     justify-content:center; 
-    position:relative;
+    /* position:relative; */
+    position:fixed;
     left: 70vw;
     top:5px;
     height: 47px;
@@ -201,121 +308,21 @@
     }
   }
   
-
-  body{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    min-width: 400px;
-    max-width: 700px;
-    /* background: #dddee1; */
-    background-color: #99999c;
-    overflow: hidden;
-    border: red 1px solid;
-  }
- 
-
-
-  #menu__toggle {
-    position: fixed;
-    top: 20px;
-    left: 26px;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-    z-index: 5;
-    /* border: green 1px solid; */
-    opacity: 0;
-  }
-  #menu__toggle:checked + .menu__btn > span {
-    transform: rotate(45deg);
-  }
-  #menu__toggle:checked + .menu__btn > span::before {
-    top: 0;
-    transform: rotate(0deg);
-  }
-  #menu__toggle:checked + .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  #menu__toggle:checked ~ .menu__box {
-    /* left: 0 !important; */
-    /* left: 0; */
-    display: block;
-  }
-  .menu__btn {
-    position: fixed;
-    top: 20px;
-    /* left: 20px; */
-    left: 26px;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-    z-index: 3;
-    /* border: red 1px solid; */
-  }
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: 6px;
-    background-color: #688d8c;
-    transition-duration: .25s;
-  }
-  .menu__btn > span::before {
-    content: '';
-    top: -6px;
-  }
-  .menu__btn > span::after {
-    content: '';
-    top: 6px;
-  }
-  .menu__box {
-    display: none;/*none / block*/
-    position: fixed;
-    /* top: -145vh; */
-    left: 20px;
-    width: 200px;
-    height: 50%;
-    margin: 0;
-    padding: 80px 0;
-    border-radius:15px;
-    list-style: none;
-    background-image: linear-gradient(to top, rgba(132, 134, 151, 0.95) , rgba(205, 213, 246, 0.95));
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3 );
-    transition-duration: .25s;
-    z-index: 2;
-  }
-  .menu__item {
-    display: block;
-    padding: 12px 24px;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    transition-duration: .25s;
-  }
-  .menu__item:hover {
-    background-color: #CFD8DC;
-  }
-
-
   .ctr0{
-    display: flex;
+    display:flex;
     flex-direction: column;
     position:relative;
     justify-content: center;
-    height: 96vh;
+    /* height: 96vh; */
+    height: 1257px;
     /* width: 98%; */
     border: solid rgb(16, 207, 10) 1px;
     padding-right: 0px;
-    /* max-width: 700vw; */
+    /* max-width: 700vw; */ 
+        /* height:800px;  */
+        background:no-repeat url(./images/giraffes_mobile_emb.jpg);
+        background-size:100%;
+        z-index:-6;
 }
 
 
@@ -326,7 +333,7 @@
   top:10vh;
   height: 29vh;
   /* width: 100vw; */
-  background-color: #5c5c63;
+  background-color: #5c5c63cb;
   border: solid rgb(197, 10, 207) 2px;
 }
 
