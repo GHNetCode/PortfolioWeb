@@ -18,17 +18,79 @@
     color:rgb(254, 223, 136);
   }
 
-  .shapesBtn{
+
+
+  #animatemeid_Btn,.circTxt{
     display: flex;
-    position: relative;
-    left: 80%;
-    top:18px;
-    background-color: #688d8c;
+    justify-content:center; 
+    position:relative;
+    left: 70vw;
+    top:5px;
+    height: 47px;
+    width: 45px;
+    border-radius: 100%;
+    padding-left: 8px;
+     /* text-align: center; */
+     /* text-decoration: none; */
+      font-family:Georgia, 'Times New Roman', Times, serif;
+     font-size: 13px;
+     border: none;
+     /* box-shadow: inset 0 0px 2px 6px hsla(0,0%,0%,.2); */
+
+
+
+     /* box-shadow: 15px 18px 15px rgba(0, 0, 0, 0.1); */
+     transition: all 0.2s ease 0s;
+     cursor: pointer;
+     /* outline: none; */
+
+
+     /*color:#bfc5c5;*/  /* Must be left out for class toggling*/
+    
+    z-index: 5;
+
   }
+ .animatemeCl_BtnOff{
+  color:#bfc5c5;
+  background-color: #9394a0ba;
+  box-shadow: 
+  inset 0 0px 2px 2px #5e5f725e,
+  inset 0 0px 2px 4px #5e5f725e,
+  inset 0 0px 2px 6px #9394a0ba,
+  inset 0 0px 2px 8px #9394a0ba
+  ;
+}
+ .animatemeCl_BtnOn{
+  color:rgb(88, 167, 231);
+  background-color: #2b7ea8b6;
+  box-shadow: inset 0 0 2px 2px hsla(190, 98%, 49%, 0.502),
+  inset 0 0 2px 4px hsla(223, 98%, 49%,.2),
+  inset 0 0 2px 6px hsla(223, 99%, 41%, 0.425),
+  inset 0 0 1px 7px hsla(249, 81%, 26%, 0.685),
+  inset 0 5px 15px 7px hsla(249, 97%, 15%, 0.726),
+  inset 0 -4px 2px 3px hsla(0,0%,0%,.5),
+  inset 0 1px 1px 7px hsla(0,0%,100%,.25),
+  inset 0 -30px 30px hsla(0,0%,0%,.1),
+  inset 0 30px 30px hsla(0,0%,0%,.2);
+}
+  
+#animatemeid_Btn:active{
+  box-shadow: inset 0 0 2px 2px hsla(190, 98%, 49%, 0.502),
+              inset 0 0 2px 4px hsla(223, 98%, 49%,.2),
+              inset 0 0 2px 6px hsla(223, 99%, 41%, 0.425),
+              inset 0 0 1px 7px hsla(249, 81%, 26%, 0.685),
+              inset 0 5px 15px 7px hsla(249, 97%, 15%, 0.726),
+              inset 0 -4px 2px 3px hsla(0,0%,0%,.5),
+              inset 0 1px 1px 7px hsla(0,0%,100%,.25),
+              inset 0 -30px 30px hsla(0,0%,0%,.1),
+              inset 0 30px 30px hsla(0,0%,0%,.2);
+  /* line-height: 86px; */
+}
 
-  .animateme {
-    display: flex;/*none / flex*/
 
+
+  #animatemeid {
+    /* display: flex;  */ /* Must be left out for class toggling to work..*/
     position: fixed;
     top: 0px;
     left: 0px;
@@ -37,6 +99,8 @@
     overflow: hidden;
     z-index: -1;
   }
+  .animatemeCL_Off{display: none;/*none / flex*/}
+  .animatemeCL_On{display: flex;/*none / flex*/}
   
   .bg-bubbles {
     position: absolute;
@@ -135,11 +199,6 @@
   }
   
 
-
-
-
-
-
   body{
     display: flex;
     flex-direction: column;
@@ -149,7 +208,7 @@
     min-width: 400px;
     max-width: 700px;
     /* background: #dddee1; */
-    background-color: #5c5c63;
+    background-color: #99999c;
     overflow: hidden;
     border: red 1px solid;
   }
@@ -251,7 +310,7 @@
     justify-content: center;
     height: 96vh;
     /* width: 98%; */
-    border: solid rgb(16, 207, 10) 3px;
+    border: solid rgb(16, 207, 10) 1px;
     padding-right: 0px;
     /* max-width: 700vw; */
 }
@@ -263,7 +322,7 @@
   justify-content: center;
   top:10vh;
   height: 29vh;
-  width: 100vw;
+  /* width: 100vw; */
   background-color: #5c5c63;
   border: solid rgb(197, 10, 207) 2px;
 }
