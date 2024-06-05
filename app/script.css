@@ -1,7 +1,7 @@
-/* * {box-sizing:border-box} */
-
+ 
  /* To improve page loading times, lets upload it directly in a file..:*/
  @import url('rubik457800NormalFonts.css');/* importing local file rubik rubik457800NormalFonts.css*/
+ @import url(./menu&ShapesBtn.css);
  /* font-family: 'Rubik', sans-serif; */
  
  /*Reset all inherited values to 0.*/
@@ -28,301 +28,37 @@
     height: 1280px;
     width: 100vw;
     min-width: 400px;
-    max-width: 700px;
+    max-width: 700vw;
     /* background: #dddee1; */
     background-color: #99999c;
     /* overflow: hidden; */
     overflow-x: hidden;
     /* border: red 1px solid; */
   }
- 
-
-
-  #menu__toggle {
-    position: fixed;
-    top: 20px;
-    left: 26px;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-    z-index: 5;
-    /* border: green 1px solid; */
-    opacity: 0;
-  }
-  #menu__toggle:checked + .menu__btn > span {
-    transform: rotate(45deg);
-  }
-  #menu__toggle:checked + .menu__btn > span::before {
-    top: 0;
-    transform: rotate(0deg);
-  }
-  #menu__toggle:checked + .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  #menu__toggle:checked ~ .menu__box {
-    /* left: 0 !important; */
-    /* left: 0; */
-    display: block;
-  }
-  .menu__btn {
-    position: fixed;
-    top: 20px;
-    /* left: 20px; */
-    left: 26px;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-    z-index: 3;
-    /* border: red 1px solid; */
-  }
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: 6px;
-    background-color: #688d8c;
-    transition-duration: .25s;
-  }
-  .menu__btn > span::before {
-    content: '';
-    top: -6px;
-  }
-  .menu__btn > span::after {
-    content: '';
-    top: 6px;
-  }
-  .menu__box {
-    display: none;/*none / block*/
-    position: fixed;
-    /* top: -145vh; */
-    left: 20px;
-    width: 200px;
-    height: 50%;
-    margin: 0;
-    padding: 80px 0;
-    border-radius:15px;
-    list-style: none;
-    background-image: linear-gradient(to top, rgba(132, 134, 151, 0.95) , rgba(205, 213, 246, 0.95));
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3 );
-    transition-duration: .25s;
-    z-index: 2;
-  }
-  .menu__item {
-    display: block;
-    padding: 12px 24px;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    transition-duration: .25s;
-  }
-  .menu__item:hover {
-    background-color: #CFD8DC;
-  }
-
-
-  #animatemeid_Btn,.circTxt{
+  
+  #bkGndImg{
     display: flex;
-    justify-content:center; 
-    /* position:relative; */
-    position:fixed;
-    left: 70vw;
-    top:5px;
-    height: 47px;
-    width: 45px;
-    border-radius: 100%;
-    padding-left: 8px;
-     /* text-align: center; */
-     text-decoration: none;
-      font-family:Georgia, 'Times New Roman', Times, serif;
-     font-size: 13px;
-     border: none;
-     /* box-shadow: inset 0 0px 2px 6px hsla(0,0%,0%,.2); */
-
-
-
-     /* box-shadow: 15px 18px 15px rgba(0, 0, 0, 0.1); */
-     transition: all 0.1s ease 0s;
-     cursor: pointer;
-     outline: none;
-
-     /* hide blue active btn square on touchscreen */
-     -webkit-tap-highlight-color: rgba(0,0,0,0);
-     -webkit-tap-highlight-color: transparent;
-
-     /*color:#bfc5c5;*/  /* Must be left out for class toggling*/
-    
-    z-index: 5;
-
-  }
- .animatemeCl_BtnOff{
-  color:#bfc5c5;
-  background-color: #9394a0ba;
-  box-shadow: 
-  inset 0 0px 2px 2px #5e5f725e,
-  inset 0 0px 2px 4px #5e5f725e,
-  inset 0 0px 2px 6px #9394a0ba,
-  inset 0 0px 2px 8px #9394a0ba
-  ;
-}
- .animatemeCl_BtnOn{
-  color:rgb(88, 167, 231);
-  background-color: #2b7ea8b6;
-  box-shadow: inset 0 0 2px 2px hsla(190, 98%, 49%, 0.502),
-  inset 0 0 2px 4px hsla(223, 98%, 49%,.2),
-  inset 0 0 2px 6px hsla(223, 99%, 41%, 0.425),
-  inset 0 0 1px 7px hsla(249, 81%, 26%, 0.685),
-  inset 0 5px 15px 7px hsla(249, 97%, 15%, 0.726),
-  inset 0 -4px 2px 3px hsla(0,0%,0%,.5),
-  inset 0 1px 1px 7px hsla(0,0%,100%,.25),
-  inset 0 -30px 30px hsla(0,0%,0%,.1),
-  inset 0 30px 30px hsla(0,0%,0%,.2);
-}
-/* inset 0 0 2px 2px hsla(190, 98%, 49%, 0.502), */
-#animatemeid_Btn:active{
-  box-shadow: inset 0 0 2px 2px hsla(190, 88%, 62%, 0.9),
-              inset 0 0 2px 4px hsla(223, 98%, 49%,.2),
-              inset 0 0 2px 6px hsla(223, 99%, 41%, 0.425),
-              inset 0 0 1px 7px hsla(249, 81%, 26%, 0.685),
-              inset 0 5px 15px 7px hsla(249, 97%, 15%, 0.726),
-              inset 0 -4px 2px 3px hsla(0,0%,0%,.5),
-              inset 0 1px 1px 7px hsla(0,0%,100%,.25),
-              inset 0 -30px 30px hsla(0,0%,0%,.1),
-              inset 0 30px 30px hsla(0,0%,0%,.2);
-  /* line-height: 86px; */
-}
-
-
-
-  #animatemeid {
-    /* display: flex;  */ /* Must be left out for class toggling to work..*/
     position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-  }
-  .animatemeCL_Off{display: none;/*none / flex*/}
-  .animatemeCL_On{display: flex;/*none / flex*/}
-  
-  .bg-bubbles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  .bg-bubbles li {
-    position: absolute;
-    list-style: none;
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: #353535;
-    bottom: 60px;
-    -webkit-animation: square 25s infinite;
-    animation: square 25s infinite;
-    -webkit-transition-timing-function: linear;
-    transition-timing-function: linear;
-    opacity:0;
-  }
-  
-  .bg-bubbles li:nth-child(1) {
-    left: 13%;
-    border-radius:50em;
-    background:transparent;
-    border:4px solid #353535;
-  }
-  
-  .bg-bubbles li:nth-child(2) {
-    left: 36%;
-    width: 75px;
-    height: 75px;
-    -webkit-animation-delay: 4s;
-            animation-delay: 4s;
-    -webkit-animation-duration: 17s;
-            animation-duration: 17s;
-  }
-  .bg-bubbles li:nth-child(3) {
-    left: 75%;
-    width: 175px;
-    height: 175px;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s;
-  }/*   
-  .bg-bubbles li:nth-child(4) {
-    left: 40%;
-    width: 90px;
-    height: 90px;
-    -webkit-animation-duration: 22s;
-            animation-duration: 22s;
-  }
-
-  .bg-bubbles li:nth-child(5) {
-    left: 70%;
-    background:transparent;
-    border:4px solid #353535;
-  }
-  ...
-  ..
-  .
-   */
-
-
-  @-webkit-keyframes square {
-    0% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity:0;
+    top:-20%;
+    /* z-index:-2;  */
+    width:100vw;
+    height:120vh;
+    background-image: url("./images/giraffes_mobile_emb.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     }
-    50% {
-      opacity:1;
-    }
-    100% {
-      -webkit-transform: translateY(-700px) rotate(600deg);
-              transform: translateY(-700px) rotate(600deg);
-      opacity:1;
-    }
-  }
-  @keyframes square {
-    0% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity:0;
-    }
-    50% {
-      opacity:1;
-    }
-    100% {
-      -webkit-transform: translateY(-700px) rotate(600deg);
-              transform: translateY(-700px) rotate(600deg);
-      opacity:0;
-    }
-  }
   
   .ctr0{
     display:flex;
     flex-direction: column;
-    position:relative;
     justify-content: center;
+    position:relative;
     /* height: 96vh; */
     height: 1257px;
     /* width: 98%; */
-    border: solid rgb(16, 207, 10) 1px;
-    padding-right: 0px;
-    /* max-width: 700vw; */ 
-        /* height:800px;  */
-        background:no-repeat url(./images/giraffes_mobile_emb.jpg);
-        background-size:100%;
-        z-index:-6;
+    border: solid rgb(18, 0, 178) 1px;
+     
+
 }
 
 
@@ -330,7 +66,7 @@
   display: flex;
   position:relative;
   justify-content: center;
-  top:10vh;
+  top:90vh;
   height: 29vh;
   /* width: 100vw; */
   background-color: #5c5c63cb;
