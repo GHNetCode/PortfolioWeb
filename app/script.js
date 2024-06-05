@@ -32,7 +32,7 @@ function circularText(txt1, radius, classIndex) {
 //pointerdown includes both click and touch events..
 let lstMnuEvt= null; // last Menu events...
 if ('onpointerdown' in window) {
-    document.addEventListener("touchstart", (event) => { //For touch screens only.. 
+    document.addEventListener("pointerdown", (event) => { //For touch screens only.. 
 
         //get id and class events from '(event)' for Variables above..
         let elementId = event.target.id;
@@ -51,7 +51,7 @@ if ('onpointerdown' in window) {
 
         if (lstMnuEvt==="menu__toggle"&&elementCls[0]!=="menu__item"){
              console.log("menu Was toggled, and no menu items were pushed, close the menu..") 
-             document.getElementById("menu__toggle").checked = false; // VERY NAUGHTY
+             document.getElementById("menu__toggle").checked = false; 
             
              console.log("Need to ensure all menu items are set!!")
         }
