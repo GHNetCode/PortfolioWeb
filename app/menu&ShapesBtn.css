@@ -8,6 +8,9 @@
     z-index: 5;
     /* border: green 1px solid; */
     opacity: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+
   }
   #menu__toggle:checked + .menu__btn > span {
     transform: rotate(45deg);
@@ -34,7 +37,6 @@
     height: 15px;
     cursor: pointer;
     z-index: 3;
-    /* border: red 1px solid; */
   }
   .menu__btn > span,
   .menu__btn > span::before,
@@ -44,7 +46,7 @@
     width: 100%;
     height: 2px;
     top: 6px;
-    background-color: #688d8c;
+    background-color: #4d451edc;/*#688d8c*/
     transition-duration: .25s;
   }
   .menu__btn > span::before {
@@ -59,39 +61,48 @@
     display: none;/*none / block*/
     position: fixed;
     /* top: -145vh; */
-    left: 20px;
+    left: 5px;
     width: 200px;
-    height: 50%;
+    height: 300px;
     margin: 0;
     padding: 80px 0;
     border-radius:15px;
-    list-style: none;
-    background-image: linear-gradient(to top, rgba(132, 134, 151, 0.95) , rgba(205, 213, 246, 0.95));
+    /* list-style: none; */
+    background-image: linear-gradient(to top, rgba(109, 83, 0, 0.658) , rgba(250, 199, 123, 0.384));
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3 );
     transition-duration: .25s;
     z-index: 2;
+    /* hide blue active btn on touchscreen */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+ 
+    
   }
   .menu__item {
     display: block;
     padding: 12px 24px;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
+    color: #b5ae8d;/*#333*/
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Instrument Serif', serif;
+
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
     transition-duration: .25s;
   }
   .menu__item:hover {
-    background-color: #CFD8DC;
+    background-color: #7f480e4c;
   }
 
 
+/* ------------------Button For Animations---------------------- */
+
   #animatemeid_Btn,.circTxt{
-    display: flex;
+    display: none;         /*none / flex*/
     justify-content:center; 
     /* position:relative; */
     position:fixed;
-    left: 70vw;
+    left: 80vw;
     top:5px;
     height: 47px;
     width: 45px;

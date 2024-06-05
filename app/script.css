@@ -15,7 +15,7 @@
     justify-content:left;
     top:0vh; 
     z-index:100;
-    color:rgb(254, 223, 136);
+    color:rgb(250, 250, 26);
   }
 
 
@@ -39,10 +39,10 @@
   #bkGndImg{
     display: flex;
     position: fixed;
-    top:-20%;
+    top:-30%;
     /* z-index:-2;  */
     width:100vw;
-    height:120vh;
+    height:130vh;
     background-image: url("./images/giraffes_mobile_emb.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -52,6 +52,7 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position:relative;
     /* height: 96vh; */
     height: 1257px;
@@ -66,11 +67,12 @@
   display: flex;
   position:relative;
   justify-content: center;
-  top:90vh;
+  top:10vh;
   height: 29vh;
-  width: 100vw;
+  width: 95%;
   background-color: #5c5c63cb;
-  border: solid rgb(197, 10, 207) 2px;
+  border: solid rgb(85, 82, 85) 2px;
+  border-radius: 10px;
 }
 
 .H2_pb{
