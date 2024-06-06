@@ -44,47 +44,32 @@ if ('onpointerdown' in window) {
         console.log('all  elementCls :'+ elementCls[0])//We assuming obj has only 1 element!
 
 
-        //if open, close menu by clicking\touching other parts of the screen..
-         //elementId :menu__toggle - menu has been opened\closed..
-         //elementCls :menu__item  - Link in menu has been pressed.
-         //elementCls :menu__box   - pressed inside menu box
-         //elementCls :ctr0        - pressed on the background
+        //if menu open, close by clicking\touching other parts of the screen..
         if (elementId==="menu__toggle"){// Let`s track it with lstEvntClId
             //console.log("menu now toggled..")
         }
         if (lstMnuEvt==="menu__toggle"&&elementCls[0]==="menu__box"||
-            elementCls[0]==="ctr0"||elementCls[0]==="ctr1"
-        ){
-           //  console.log("menu Was toggled, and no menu items were pushed, close the menu..") 
+            elementCls[0]==="ctr0"||elementCls[0]==="ctr1"||elementCls[0]==="H2_pb"){
+           //  console.log("menu Was toggled, and no menu items were pushed, close the menu..") H2_pb
              document.getElementById("menu__toggle").checked = false; 
              console.log("Need to ensure all menu items are set!!")
         }
         lstMnuEvt = elementId;//set lstMnuEvt at the End of menu if statement(s)..
-     })}else{if ('onclick' in window){
-//      window.preventDefault();
-      document.addEventListener("click", (event) => { // For mouse clicks only..
-          
-          let elementId = event.target.id;
-          let elementCls = event.target.classList; //event.target.classList.contains("my-class")
-         console.log('click elementId : '+ elementId);
-         console.log('click elementCls : '+ elementCls);
-      
-         if (elementId==="menu__toggle"){// Let`s track it with lstEvntClId
-          console.log("menu now toggled..")
-          //document.getElementById("menu__toggle").checked = true;
-        //  menu__toggle_check();
-      }
-
-      if (lstMnuEvt==="menu__toggle"&&elementCls[0]!=="menu__item"
-      ){
-         //  console.log("menu Was toggled, and no menu items were pushed, close the menu..") 
-           document.getElementById("menu__toggle").checked = false; 
-          // menu__toggle_uncheck();
-           console.log("Need to ensure all menu items are set!!")
-      }
-      lstMnuEvt = elementId;//set lstMnuEvt at the End of menu if statement(s)..
-      
-      }    ) }}
+        })}
+        else{if ('onclick' in window){
+//         window.preventDefault();
+         document.addEventListener("click", (event) => { // For mouse clicks only..
+             let elementId = event.target.id;
+             let elementCls = event.target.classList; //event.target.classList.contains("my-class")
+            console.log('click elementId : '+ elementId);
+            console.log('click elementCls : '+ elementCls);
+        if (lstMnuEvt==="menu__toggle"&&elementCls[0]!=="menu__item"
+         ){//console.log("menu Was toggled, and no menu items were pushed, close the menu..") 
+              document.getElementById("menu__toggle").checked = false; 
+              console.log("Need to ensure all menu items are set!!")
+         }
+         lstMnuEvt = elementId;//set lstMnuEvt at the End of menu if statement(s)..
+         })}}
 
 
 /*
