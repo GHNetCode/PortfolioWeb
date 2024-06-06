@@ -40,7 +40,9 @@ if ('onpointerdown' in window) {
           //event.target.classList.contains("my-class") 
         console.log('all  elementId :'+ elementId);
         console.log('all  elementCls :'+ elementCls[0])//We assuming obj has only 1 element!
-        //closing menu by clicking\touching other parts of the screen
+
+
+        //if open, close menu by clicking\touching other parts of the screen
          //elementId :menu__toggle - menu has been opened\closed..
          //elementCls :menu__item  - Link in menu has been pressed.
          //elementCls :menu__box   - pressed inside menu box
@@ -49,13 +51,20 @@ if ('onpointerdown' in window) {
             console.log("menu now toggled..")
         }
 
-        if (lstMnuEvt==="menu__toggle"&&elementCls[0]!=="menu__item"){
-             console.log("menu Was toggled, and no menu items were pushed, close the menu..") 
+        if (lstMnuEvt==="menu__toggle"&&elementCls[0]==="menu__box"||
+            elementCls[0]==="ctr0"||elementCls[0]==="ctr1"
+            
+        ){
+           //  console.log("menu Was toggled, and no menu items were pushed, close the menu..") 
              document.getElementById("menu__toggle").checked = false; 
             
              console.log("Need to ensure all menu items are set!!")
         }
         lstMnuEvt = elementId; //
+
+
+
+
      })}
 
 
