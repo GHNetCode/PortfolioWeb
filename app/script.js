@@ -63,9 +63,9 @@ function scrlfInfOutFunc() {
       if (elementTop < windowHeight - elementVisible) {
             fInfOut[i].classList.add("active");
           } 
-        //  else {
-         //   fInfOut[i].classList.remove("active");
-        //}
+          else {
+            fInfOut[i].classList.remove("active");
+        }
         if (elementBtm > windowHeight - elementInVisible) {
             fInfOut[i].classList.remove("active");
           } 
