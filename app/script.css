@@ -1,7 +1,8 @@
  
  /* To improve page loading times, lets upload it directly in a file..:*/
  @import url('rubik457800NormalFonts.css');/* importing local file rubik rubik457800NormalFonts.css*/
- @import url(./menu&ShapesBtn.css);
+ @import url(./menu&ShapesBtn.css);/*Menu burger and Shapes button..*/
+ @import url(./ScrollfadeInOut.css);/*On Scrolling fade containers in and out....*/
  /* font-family: 'Rubik', sans-serif; */
  
  /*Reset all inherited values to 0.*/
@@ -24,7 +25,7 @@
     position: relative;
     height: 1280px;
     width: 100%;
-    min-width: 325px;
+    min-width: 310px;
     max-width: 100vw;
     /* background: #dddee1; */
     background-color: #99999c;
@@ -54,34 +55,32 @@
     #bkGndImg{
       display: flex;
       position: fixed;
-      top: -100px;
-      width:100%;
+      top: -100px;/*clip the top of the pic*/
+      width:100vw;
     }
   
   .ctr0{
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     position:relative;
     /* height: 96vh; */
     height: 1257px;
     /* width: 98%; */
-    border: solid rgb(18, 0, 178) 1px;
-     
-
+    border: dashed #907635dc 5px;
 }
 
 
 .ctr1{
   display: flex;
   position:relative;
-  justify-content: center;
-  top:10vh;
-  height: 29vh;
+  /* justify-content: center; */
+  top:100vh;
+  height: 150px;
   width: 95%;
   background-color: #5c5c63cb;
-  border: solid rgb(85, 82, 85) 2px;
+  border: solid rgb(24, 74, 202) 2px;
   border-radius: 10px;
 }
 
