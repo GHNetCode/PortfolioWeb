@@ -3,7 +3,7 @@
   position: relative;
   transform: translateY(100px);
   opacity: 0;
-  transition: 1s all ease;
+  transition: 0.5s all ease;
 }
 
 .scrlfInfOutCl.active{
