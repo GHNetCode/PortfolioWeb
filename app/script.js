@@ -1,6 +1,7 @@
 
 window.onresize=()=>{
     document.getElementById('resizeInnerW').textContent=window.innerWidth;
+    document.getElementById('resizeInnerH').textContent=window.innerHeight;
     }
 
 
@@ -54,21 +55,19 @@ function scrlfInfOutFunc() {
     for (let i = 0; i < fInfOut.length; i++) {
         let windowHeight = window.innerHeight;
         let elementTop = fInfOut[i].getBoundingClientRect().top;
+        let elementBotm = fInfOut[i].getBoundingClientRect().bottom;
         let elementVisible = 0;
-        let elementInVisible = 410;
+        let elementInVisible = 150;
   
       if (elementTop < windowHeight - elementVisible) {
             fInfOut[i].classList.add("active");
-          } else {
-            fInfOut[i].classList.remove("active");
-        }
-
-        if (elementTop > windowHeight - elementInVisible) {
-            fInfOut[i].classList.remove("active");
           } 
         //  else {
-        //    fInfOut[i].classList.remove("active");
+         //   fInfOut[i].classList.remove("active");
         //}
+        if (elementBotm > windowHeight - elementInVisible) {
+            fInfOut[i].classList.remove("active");
+          } 
 }}
   window.addEventListener("scroll", scrlfInfOutFunc);
   //on scrolling fade containers in and out..-------------------------------
