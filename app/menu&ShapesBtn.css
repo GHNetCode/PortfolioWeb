@@ -54,12 +54,10 @@
   }
   .menu__btn > span::before {
     content: '';
-    top: -6px;
-  }
+    top: -6px;  }
   .menu__btn > span::after {
     content: '';
-    top: 6px;
-  }
+    top: 6px;  }
   .menu__box {
     display: none;/*none / block*/
     position: fixed;
@@ -77,10 +75,7 @@
     z-index: 2;
     /* hide blue active btn on touchscreen */
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent;
- 
-    
-  }
+    -webkit-tap-highlight-color: transparent;}
   .menu__item {
     display: block;
     padding: 12px 24px;
@@ -91,11 +86,9 @@
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
-    transition-duration: .25s;
-  }
+    transition-duration: .25s;}
   .menu__item:hover {
-    background-color: #7f480e4c;
-  }
+    background-color: #7f480e4c; }
 
 
 /* ------------------Button For Animations---------------------- */
@@ -131,9 +124,7 @@
 
      /*color:#bfc5c5;*/  /* Must be left out for class toggling*/
     
-    z-index: 5;
-
-  }
+    z-index: 5;}
  .animatemeCl_BtnOff{
   color:#bfc5c5;
   background-color: #9394a0ba;
@@ -141,9 +132,7 @@
   inset 0 0px 2px 2px #5e5f725e,
   inset 0 0px 2px 4px #5e5f725e,
   inset 0 0px 2px 6px #9394a0ba,
-  inset 0 0px 2px 8px #9394a0ba
-  ;
-}
+  inset 0 0px 2px 8px #9394a0ba;}
  .animatemeCl_BtnOn{
   color:rgb(88, 167, 231);
   background-color: #2b7ea8b6;
@@ -155,8 +144,7 @@
   inset 0 -4px 2px 3px hsla(0,0%,0%,.5),
   inset 0 1px 1px 7px hsla(0,0%,100%,.25),
   inset 0 -30px 30px hsla(0,0%,0%,.1),
-  inset 0 30px 30px hsla(0,0%,0%,.2);
-}
+  inset 0 30px 30px hsla(0,0%,0%,.2);}
 /* inset 0 0 2px 2px hsla(190, 98%, 49%, 0.502), */
 #animatemeid_Btn:active{
   box-shadow: inset 0 0 2px 2px hsla(190, 88%, 62%, 0.9),
@@ -167,9 +155,7 @@
               inset 0 -4px 2px 3px hsla(0,0%,0%,.5),
               inset 0 1px 1px 7px hsla(0,0%,100%,.25),
               inset 0 -30px 30px hsla(0,0%,0%,.1),
-              inset 0 30px 30px hsla(0,0%,0%,.2);
-  /* line-height: 86px; */
-}
+              inset 0 30px 30px hsla(0,0%,0%,.2);}
 
 
 
@@ -181,8 +167,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* z-index: -1; */
-  }
+    /* z-index: -1; */ }
   .animatemeCL_Off{display: none;/*none / flex*/}
   .animatemeCL_On{display: flex;/*none / flex*/}
   
@@ -192,8 +177,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* z-index: 10; */
-  }
+    /* z-index: 10; */ }
   .bg-bubbles li {
     position: absolute;
     list-style: none;
@@ -206,15 +190,13 @@
     animation: square 25s infinite;
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
-    opacity:0;
-  }
+    opacity:0;}
   
   .bg-bubbles li:nth-child(1) {
     left: 13%;
     border-radius:50em;
     background:transparent;
-    border:4px solid #353535;
-  }
+    border:4px solid #353535; }
   
   .bg-bubbles li:nth-child(2) {
     left: 36%;
@@ -223,40 +205,19 @@
     -webkit-animation-delay: 4s;
             animation-delay: 4s;
     -webkit-animation-duration: 17s;
-            animation-duration: 17s;
-  }
+            animation-duration: 17s;}
   .bg-bubbles li:nth-child(3) {
     left: 75%;
     width: 175px;
     height: 175px;
     -webkit-animation-delay: 8s;
-            animation-delay: 8s;
-  }/*   
-  .bg-bubbles li:nth-child(4) {
-    left: 40%;
-    width: 90px;
-    height: 90px;
-    -webkit-animation-duration: 22s;
-            animation-duration: 22s;
-  }
-
-  .bg-bubbles li:nth-child(5) {
-    left: 70%;
-    background:transparent;
-    border:4px solid #353535;
-  }
-  ...
-  ..
-  .
-   */
-
-
+            animation-delay: 8s;}
   @-webkit-keyframes square {
     0% {
       -webkit-transform: translateY(0);
               transform: translateY(0);
       opacity:0;
-    }
+     }
     50% {
       opacity:1;
     }

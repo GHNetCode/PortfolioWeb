@@ -54,13 +54,21 @@ function scrlfInfOutFunc() {
     for (let i = 0; i < fInfOut.length; i++) {
         let windowHeight = window.innerHeight;
         let elementTop = fInfOut[i].getBoundingClientRect().top;
-        let elementVisible = 10;
+        let elementVisible = 0;
+        let elementInVisible = 410;
   
       if (elementTop < windowHeight - elementVisible) {
             fInfOut[i].classList.add("active");
           } else {
             fInfOut[i].classList.remove("active");
         }
+
+        if (elementTop > windowHeight - elementInVisible) {
+            fInfOut[i].classList.remove("active");
+          } 
+        //  else {
+        //    fInfOut[i].classList.remove("active");
+        //}
 }}
   window.addEventListener("scroll", scrlfInfOutFunc);
   //on scrolling fade containers in and out..-------------------------------
