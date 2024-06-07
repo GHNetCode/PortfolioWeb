@@ -54,18 +54,19 @@ function scrlfInfOutFunc() {
   
     for (let i = 0; i < fInfOut.length; i++) {
         let windowHeight = window.innerHeight;
-        let elementTop = fInfOut[i].getBoundingClientRect().top;
-        let elementBotm = fInfOut[i].getBoundingClientRect().bottom;
+        let elementTop = fInfOut[i].getBoundingClientRect().top; //Top is the distance between Top of the window and top of container..
+        let elementBtm = fInfOut[i].getBoundingClientRect().bottom;//Top is the distance between Top of the window and bottom of container..
         let elementVisible = 0;
         let elementInVisible = 150;
-  
+        console.log("elementTop -: "+ elementTop)
+        console.log("elementBtm -: "+ elementBtm)
       if (elementTop < windowHeight - elementVisible) {
             fInfOut[i].classList.add("active");
           } 
         //  else {
          //   fInfOut[i].classList.remove("active");
         //}
-        if (elementBotm > windowHeight - elementInVisible) {
+        if (elementBtm > windowHeight - elementInVisible) {
             fInfOut[i].classList.remove("active");
           } 
 }}
