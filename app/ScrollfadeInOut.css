@@ -1,9 +1,9 @@
 
 .scrlfInfOutCl{
   position: relative;
-  transform: translateY(100px);
+  transform: translateY(10px);
   opacity: 0;
-  transition: 0.5s all ease;
+  transition: 0.2s all ease;
 }
 
 .scrlfInfOutCl.active{
