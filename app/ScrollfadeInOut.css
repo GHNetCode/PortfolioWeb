@@ -2,11 +2,11 @@
 .scrlfInfOutCl{
   position: relative;
   transform: translateY(10px);
-  opacity: 0;
-  transition: 1.2s all ease;
+  opacity: 0%;
+  transition: 0.2s all ease;
 }
 
 .scrlfInfOutCl.active{
-  transform: translateY(0);
-  opacity: 1;
+  transform: translateY(20%);
+  opacity: 100%;
 }

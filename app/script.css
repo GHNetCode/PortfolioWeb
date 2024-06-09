@@ -73,16 +73,17 @@
 }
 
 
-.ctr1{
+.ctr1{/* & scrlfInfOutCl*/
   display: flex;
   position:relative;
   justify-content: center;
-  top:100vh;
+  top:93vh;
   height: 150px;
   width: 95%;
-  background-color: #5c5c63cb;
+  background-color: rgba(92, 92, 99, 0.89);
   border: solid rgb(24, 74, 202) 2px;
   border-radius: 10px;
+  opacity: 40%;
 }
 
 .H2_pb{
