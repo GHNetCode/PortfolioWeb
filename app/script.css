@@ -56,9 +56,19 @@
     #bkGndImg{
       display: flex;
       position: fixed;
-      top: -100px;/*clip the top of the pic*/
+      /*top: -40%;  /* -10%  --clip the top of the pic*/
+      /* height: 100%; */
+      bottom: 0dvh;
       width:100vw;
     }
+    /*700px or more required for Desktops...*/
+    /* @media (min-width:700px){
+      #mainPage{  height: 100%;  align-items:center;   }
+    }   */
+    /* @media (min-height:660px){
+      #bkGndImg{top: -50%; }
+    } */
+   
   
   .ctr0{
     display:flex;
@@ -67,7 +77,7 @@
     align-items: center;
     position:relative;
     /* height: 96vh; */
-    height: 1257px;
+    height: 1266px; /*1257px - works with body height..*/
     /* width: 98%; */
     border: dashed #907635dc 5px;
 }
@@ -96,11 +106,12 @@
   display: flex;
   position: relative;
   justify-content: right;
-  border: solid green 1px; 
+  background-color: #99999cc0;
+  /* border: solid rgb(128, 0, 102) 2px;  */
   font-style: italic; 
   font-size: 14px; 
-  padding-right:1vw;
-  margin-bottom:0%;
-  color: #e5d689} 
+  /* padding-right:1vw; */
+  bottom:0%;
+  color: #ffd503c9} 
  
  
