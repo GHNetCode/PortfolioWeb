@@ -60,6 +60,7 @@
       /* height: 100%; */
       bottom: 0dvh;
       width:100vw;
+      
     }
     /*700px or more required for Desktops...*/
     /* @media (min-width:700px){
@@ -79,7 +80,15 @@
     /* height: 96vh; */
     height: 1266px; /*1257px - works with body height..*/
     /* width: 98%; */
-    border: dashed #907635dc 5px;
+    /* Use https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator */
+    border-image-slice:0 30 0 19;
+    border-image-width: 0px 15px 0px 15px;
+    border-image-outset:0px 0px 0px 0px;
+    border-image-repeat:round round ;
+    border-image-source:url(./images/tobeformated/footprints1837-LRc.png);
+    border-style:solid;
+
+
 }
 
 
@@ -106,12 +115,15 @@
   display: flex;
   position: relative;
   justify-content: right;
-  background-color: #99999cc0;
+  top:-2px;
+  /* background-color: rgb(167, 164, 156); */
+  background:  linear-gradient(90deg,rgba(102, 99, 92, 0.511),rgb(167, 164, 156),rgb(102, 99, 92));
   /* border: solid rgb(128, 0, 102) 2px;  */
   font-style: italic; 
-  font-size: 14px; 
-  /* padding-right:1vw; */
+  font-size: 14px;
+   
+  padding-right:1vw;
   bottom:0%;
-  color: #ffd503c9} 
+  color: #f3e7aec9} 
  
  

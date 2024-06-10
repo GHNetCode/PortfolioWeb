@@ -41,7 +41,8 @@ if ('onpointerdown' in window){
 
         //if menu open, close by clicking\touching other parts of the screen..
             if (document.getElementById("menu__toggle").checked===true){
-                if (elementCls[0]==="menu__box"||elementCls[0]==="ctr0"||elementCls[0]==="ctr1"||elementCls[0]==="H2_pb")
+                if (elementCls[0]==="menu__box"||elementCls[0]==="ctr0"||
+                    elementCls[0]==="ctr1"||elementCls[0]==="H2_pb")
                     { document.getElementById("menu__toggle").checked = false;  
                     console.log("Need to ensure all menu items are set!!") }          
               }
