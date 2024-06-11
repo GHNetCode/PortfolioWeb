@@ -87,30 +87,33 @@
     border-image-repeat:round round ;
     border-image-source:url(./images/footprints1837-LRc.png);
     border-style:solid;
-
-
 }
-
-
-.ctr1{/* & scrlfInfOutCl*/
+.ctr0_ctr1{/* & scrlfInfOutCl*/
   display: flex;
   position:relative;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   top:94svh;/*dvh bounces..*/
-  height: 150px;
-  width: 95%;
+  /* height: 150px; */
+  width: 86vw;/*95%*/
   background-color: rgba(92, 92, 99, 0.89);
-  border: solid rgb(24, 74, 202) 2px;
+  border: solid rgb(166, 135, 63) 1px;  /*solid rgb(75, 59, 23) 2px linear-gradient(90deg,rgba(102, 99, 92, 0.511),rgb(167, 164, 156),rgb(102, 99, 92)); */
+  padding: 5px;
   border-radius: 10px;
   opacity: 40%;
 }
-
-.H2_pb{
+.ctr1_H2{
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   color:rgb(181, 177, 157);
 }
-
+.ctr1_pgrC{
+  display: flex;
+  position:relative;
+  justify-content: center;
+  color:rgb(186, 181, 158);
+   
+}
 #attribution {
   display: flex;
   position: relative;
