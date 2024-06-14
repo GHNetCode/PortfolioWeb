@@ -57,13 +57,13 @@ function scrlfInfOutFunc() {
         let windowHeight = window.innerHeight;
         let elementTop = fInfOut[i].getBoundingClientRect().top; //Top is the distance between Top of the window and top of container..
         let elementBtm = fInfOut[i].getBoundingClientRect().bottom;//Top is the distance between Top of the window and bottom of container..
-        let elementVisible = 0;
-        let elementInVisible = -50;//the higher the value, the longer the further up the screen to be visible\invisible..
+        let elementVisible = 50;
+       // let elementInVisible = 0;//the higher the value, the longer the further up the screen to be visible\invisible..
         console.log("elementTop -: "+ elementTop)
         console.log("elementBtm -: "+ elementBtm)
       if (elementTop < windowHeight - elementVisible) {
             fInfOut[i].classList.add("active");
-          } 
+          }
           else {
             fInfOut[i].classList.remove("active");
         }
