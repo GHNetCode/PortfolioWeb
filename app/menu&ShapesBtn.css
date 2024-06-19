@@ -80,7 +80,7 @@
     list-style: none;
     background-image: linear-gradient(to top, rgba(65, 53, 17, 0.658) , rgba(44, 31, 11, 0.384));
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3 );
-    transition-duration: .25s;
+    transition-duration: 0.25s;
     z-index: 2;
     /* hide blue active btn on touchscreen */
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -104,8 +104,8 @@
     .onclick-menu:focus {
       /* clicking on label should toggle the menu */
       pointer-events: none;
-      transition-duration: 0.25s;
-      transition-delay: ease 0.25s ;
+      /* transition-delay: 1.25s ; */
+      transition-delay: ease 0.5s ;
   }
 
   .onclick-menu:focus .onclick-menu-content {
@@ -121,10 +121,11 @@
       /* don't let pointer-events affect descendant elements */
       /* border: solid red 2px; */
       pointer-events: auto;
-      transition-delay: ease 0.25s ;
+      transition-delay: ease 0.5s ;
   }
   .menu__item_sub{
   padding: 4px 30px; /*top/right*/ 
+  transition-delay: ease 0.5s ;
   }
 
   .onclick-menu-content {
@@ -132,10 +133,11 @@
       display: none;
       opacity: 1;
       /* visibility: hidden; */
-      transition-delay: ease 0.25s ;
+      transition-delay: ease 0.5s ;
   }
   .onclick-menu-content li{
       list-style: none;
+      transition-delay: ease 0.5s ;
   }
 
 /* ------------------Button For Animations---------------------- */
