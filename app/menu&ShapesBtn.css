@@ -80,7 +80,6 @@
     list-style: none;
     background-image: linear-gradient(to top, rgba(65, 53, 17, 0.658) , rgba(44, 31, 11, 0.384));
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3 );
-    transition-duration: 0.25s;
     z-index: 2;
     /* hide blue active btn on touchscreen */
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -94,51 +93,60 @@
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
-    transition-duration: .25s;}
+    transition:  0.25s ease-out;
+  }
   .menu__item:hover {
     background-color: #ca913b34; 
     border-radius:4px;
-    transition-duration: 0.25s;
     }
+
+  
 
     .onclick-menu:focus {
       /* clicking on label should toggle the menu */
       pointer-events: none;
-      /* transition-delay: 1.25s ; */
-      transition-delay: ease 0.5s ;
+     background-color:unset
   }
-
-  .onclick-menu:focus .onclick-menu-content {
-      /*  opacity is 1 in opened state (see below) */
-      opacity: 1;
-      /* visibility: visible; */
-      display: flex;
-      flex-direction: column;
-      width: 82svw;
-      background-image: linear-gradient(to top, rgba(65, 53, 17, 0.658) , rgba(44, 31, 11, 0.384));
-      border-radius:15px;
-      /* padding: 1px 0px; */
-      /* don't let pointer-events affect descendant elements */
-      /* border: solid red 2px; */
-      pointer-events: auto;
-      transition-delay: ease 0.5s ;
-  }
-  .menu__item_sub{
-  padding: 4px 27px; /*top/right*/ 
-  transition-delay: ease 0.5s ;
-  }
+  
+    .onclick-menu:focus .onclick-menu-content {
+        /*  opacity is 1 in opened state (see below) */
+        opacity: 1;
+        /* visibility: visible; */
+        display: flex;
+        flex-direction: column;
+        width: 82svw;
+        background-image: linear-gradient(to top, rgba(65, 53, 17, 0.432) , rgba(44, 31, 11, 0.24));
+        border-radius:15px;
+        /* padding: 1px 0px; */
+        /* don't let pointer-events affect descendant elements */
+        /* border: solid rgb(71, 66, 27) 2px; */
+        pointer-events: auto;
+    }
 
   .onclick-menu-content {
-     /* use opacity to fake immediate toggle */
-      display: none;
-      opacity: 1;
-      /* visibility: hidden; */
-      transition-delay: ease 0.5s ;
+    /* use opacity to fake immediate toggle */
+    display: none; 
+     opacity: 1;/**/
+     /* visibility: hidden;  */
+ }
+ .onclick-menu-content li{
+   list-style: none; 
+ }
+ 
+
+  .menu__item_sub{
+  padding: 4px 42px; /*top/right*/ 
   }
-  .onclick-menu-content li{
-      list-style: none;
-      transition-delay: ease 0.5s ;
-  }
+
+ 
+  /* animation: fadeOut 2s; */
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+   
+
+  
 
 /* ------------------Button For Animations---------------------- */
 /* ------------------Button For Animations---------------------- */
