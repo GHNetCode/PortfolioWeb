@@ -63,11 +63,11 @@ function scrlfInfOutFunc() {
         console.log("elementBtm -: "+ elementBtm)
       if (elementTop < windowHeight - elementVisible) {
             fInfOut[i].classList.add("active");
-          }
-          else {
+          } else {
             fInfOut[i].classList.remove("active");
-        }
-        if (elementBtm > windowHeight - elementInVisible) {
+          }
+          
+      if (elementBtm > windowHeight - elementInVisible) {
             fInfOut[i].classList.remove("active");
           } 
 }}
