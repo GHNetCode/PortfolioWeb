@@ -114,6 +114,7 @@
       width: 300px;
       background-image: linear-gradient(to top, rgba(65, 53, 17, 0.658) , rgba(44, 31, 11, 0.384));
       border-radius:15px;
+      transition-duration: 0.5s;
       /* padding: 1px 0px; */
       /* don't let pointer-events affect descendant elements */
       /* border: solid red 2px; */
@@ -128,10 +129,12 @@
       display: none;
       opacity: 1;
       /* visibility: hidden; */
-      transition: visibility 0.5s;
+      /* transition: visibility 0.5s; */
+      transition-duration: 0.5s;
   }
   .onclick-menu-content li{
       list-style: none;
+      transition-duration: 0.5s;
   }
 
 /* ------------------Button For Animations---------------------- */
