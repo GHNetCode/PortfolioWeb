@@ -11,9 +11,9 @@
 
 <body>
  <nav class="hamburger-menu">
-   <input id="menu__toggle" type="checkbox" />
+   <input tabindex="0"  id="menu__toggle" type="checkbox" />
    <!-- <label class="menu__btn"><input id="menu__toggle" type="checkbox" name="checkbox" value="value"></label> -->
-   <label class="menu__btn" for="menu__toggle">
+   <label tabindex="0"  class="menu__btn" for="menu__toggle">
      <span></span>
    </label>
    <ul class="menu__box">
@@ -21,17 +21,24 @@
      <!-- <li><a class="menu__item" href="#">Portfolio</a></li> -->
      <li>
       <div tabindex="0" class="menu__item onclick-menu">Portfolio
-        <ul class="onclick-menu-content">
-            <li><a class="menu__item" href="#">Internet Profiles:</a></li>
-            <li><a class="menu__item menu__item_sub" href="#">LinkedIn</a></li>
-            <li><a class="menu__item menu__item_sub" href="#">FrontendMentor</a></li>
-            <li><a class="menu__item" href="#">Posts & Videos:</a></li>
-            <li><a class="menu__item menu__item_sub" href="#">Youtube Channel</a></li>
-            <li><a class="menu__item menu__item_sub" href="#">medium.com Posts</a></li>
+        <ul tabindex="0" class="onclick-menu-content">
+            <li><a tabindex="0" class="menu__item" href="#">Profiles:</a></li>
+            <li><a tabindex="0" class="menu__item menu__item_sub" href="#">LinkedIn</a></li>
+            <li><a tabindex="0" class="menu__item menu__item_sub" href="#">FrontendMentor</a></li>
+            <li><a tabindex="0" class="menu__item" href="#">Posts & Videos:</a></li>
+            <li><a tabindex="0" class="menu__item menu__item_sub" href="#">Youtube Channel</a></li>
+            <li><a tabindex="0" class="menu__item menu__item_sub" href="#">medium.com Posts</a></li>
         </ul>
       </div>
      </li>
-     <li><a class="menu__item" href="#">WebApps</a></li>
+     <li>
+      <div tabindex="0" class="menu__item onclick-menu">WebApps
+        <ul class="onclick-menu-content">
+            <li><a class="menu__item menu__item_sub" href="#">Ip Address Tracker</a></li>
+            <li><a class="menu__item menu__item_sub" href="#">URL shortener</a></li>
+        </ul>
+      </div>
+     </li>
      <li><a class="menu__item" href="#">Current Projects</a></li>
      <li><a class="menu__item" href="#">SandBox</a></li>
      <li><a class="menu__item" href="#">Get In touch</a></li>

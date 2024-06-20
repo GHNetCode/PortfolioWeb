@@ -94,6 +94,7 @@
     font-weight: 600;
     text-decoration: none;
     transition:  0.25s ease-out;
+    cursor: pointer;
   }
   .menu__item:hover {
     background-color: #ca913b34; 
@@ -104,8 +105,8 @@
 
     .onclick-menu:focus {
       /* clicking on label should toggle the menu */
-      pointer-events: none;
-     background-color:unset
+      /* pointer-events: none; */ /*WATCH*/
+     background-color:unset /*unselect background once open..*/
   }
   
     .onclick-menu:focus .onclick-menu-content {
@@ -120,7 +121,10 @@
         /* padding: 1px 0px; */
         /* don't let pointer-events affect descendant elements */
         /* border: solid rgb(71, 66, 27) 2px; */
-        pointer-events: auto;
+
+
+        /* pointer-events: auto;  /*WATCH*/
+       
     }
 
   .onclick-menu-content {
@@ -130,7 +134,7 @@
      /* visibility: hidden;  */
  }
  .onclick-menu-content li{
-   list-style: none; 
+   list-style: none; /*hide the dots infront..*/
  }
  
 
