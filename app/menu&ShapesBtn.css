@@ -98,7 +98,8 @@
   }
   .menu__item:hover {
     background-color: #ca913b34; 
-    border-radius:4px;
+    color: #b7916c;
+    /*border-radius:10px;*/ /*4px*/
     }
 
   
@@ -107,7 +108,7 @@
       /* clicking on label should toggle the menu */
       /* pointer-events: none; */ /*WATCH*/
      background-color:unset; /*unselect background once open..*/
-     border-left:solid burlywood 1px;
+     border-left:solid rgba(207, 147, 69, 0.874) 2px;
      color: #c97b2d
   }
   
@@ -142,7 +143,9 @@
  
 
   .menu__item_sub{
-  padding: 4px 42px; /*top/right*/ 
+    font-size: 18px;
+    font-weight: 4;
+     padding: 4px 42px; /*top/right*/ 
   }
 
  
