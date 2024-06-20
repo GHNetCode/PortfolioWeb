@@ -87,7 +87,7 @@
   .menu__item {
     display: block;
     padding: 8px 20px;
-    color: #b5ae8d;/*#333*/
+    color: #b5ae8d;/*b5ae8d*/
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Instrument Serif', serif;
     font-size: 20px;
@@ -106,7 +106,9 @@
     .onclick-menu:focus {
       /* clicking on label should toggle the menu */
       /* pointer-events: none; */ /*WATCH*/
-     background-color:unset /*unselect background once open..*/
+     background-color:unset; /*unselect background once open..*/
+     border-left:solid burlywood 1px;
+     color: #c97b2d
   }
   
     .onclick-menu:focus .onclick-menu-content {
@@ -118,6 +120,7 @@
         width: 82svw;
         background-image: linear-gradient(to top, rgba(65, 53, 17, 0.432) , rgba(44, 31, 11, 0.24));
         border-radius:15px;
+        border-left:solid burlywood 1px;
         /* padding: 1px 0px; */
         /* don't let pointer-events affect descendant elements */
         /* border: solid rgb(71, 66, 27) 2px; */
