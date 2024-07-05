@@ -16,29 +16,55 @@
    <label tabindex="0"  class="menu__btn" for="menu__toggle">
      <span></span>
    </label>
-   <ul class="menu__box">
-     <li><a class="menu__item" href="#">Home</a></li>
-     <!-- <li><a class="menu__item" href="#">Portfolio</a></li> -->
-     <li>
-      <div tabindex="0" class="menu__item onclick-menu">Portfolio
-        <ul class="onclick-menu-content">
-            <li><a class="menu__item" href="#">Profiles:</a></li>
-            <li><a class="menu__item menu__item_sub" href="#">LinkedIn</a></li>
-            <li><a class="menu__item menu__item_sub" href="#">FrontendMentor</a></li>
-            <li><a class="menu__item" href="#">Posts & Videos:</a></li>
-            <li><a class="menu__item menu__item_sub" href="#">Youtube Channel</a></li>
-            <li><a class="menu__item menu__item_sub" href="#">medium.com Posts</a></li>
-        </ul>
-      </div>
-     </li>
-     <li>
-      <div tabindex="0" class="menu__item onclick-menu">WebApps
-        <ul class="onclick-menu-content">
-            <li><a class="menu__item menu__item_sub" href="#">Ip Address Tracker</a></li>
-            <li><a class="menu__item menu__item_sub" href="#">URL shortener</a></li>
-        </ul>
-      </div>
-     </li>
+
+   <!-- 
+   .menuBox and .menuBoxAnimate before and after 
+   states used for animating the listItems..
+   .listItem: used for animating..
+   .menu__aItem: used for decorating..
+   .closeMenu: used for closing the menu once menu item is clicked.
+   -->
+   <ul tabindex="0" class="menuBox menuBoxAnimate">
+      <li tabindex="0" class="listItem"><a class="menu__aItem closeMenu" href="#">Home</a></li>
+      <li tabindex="0" class="subMenu_1 listItem"><h4 class="subMenuBtn1 menu__aItem">Portfolio</h4>
+         <ul>
+             <li tabindex="0" class="listItem"><a class="menu__aItem closeMenu" href="#">LinkedIn</a></li>
+             <li tabindex="0" class="listItem"><a class="menu__aItem closeMenu" href="#">FrontendMentor</a></li>
+             <li tabindex="0" class="listItem"><a class="menu__aItem closeMenu" href="#">medium.com Posts</a></li>
+         </ul> 
+      </li>
+
+      <li tabindex="0" class="subMenu_2 listItem"><h4 class="subMenuBtn2 menu__aItem">WebApps</h4>
+        <ul>
+            <li tabindex="0" class="listItem"><a class="menu__aItem closeMenu" href="#">IP Address Tracker</a></li>
+            <li tabindex="0" class="listItem"><a class="menu__aItem closeMenu" href="#">URL shortener</a></li>
+        </ul> 
+      </li>
+
+      <li tabindex="0" class="subMenu_3 listItem"><h4 class="subMenuBtn3 menu__aItem">Dev Related</h4>
+       <ul>
+           <li tabindex="0" class="listItem"><a class="menu__aItem closeMenu" href="#">Sand</a></li>
+       </ul> 
+      </li>
+
+      <li tabindex="0" class="subMenu_4 listItem"><h4 class="subMenuBtn4 menu__aItem">Get In touch</h4>
+       <ul>
+           <li tabindex="0" class="listItem">
+              <a id="subMBtn4Email" class="menu__aItem">
+              <span id="copyCopiedBtn">copy</span>
+                <span id="emailAdr">mark.d.sheard@gmail.com</span>
+             </a>
+            
+          </li>
+       </ul> 
+      </li>
+      
+
+     
+
+<!-- 
+     
+
      <li>
       <div tabindex="0" class="menu__item onclick-menu">Current Projects
         <ul class="onclick-menu-content">
@@ -48,6 +74,7 @@
       </div>
      </li>
      <li>
+
       <div tabindex="0" class="menu__item onclick-menu">SandBox
         <ul class="onclick-menu-content">
             <li><a class="menu__item menu__item_sub" href="#">Developers Playground.</a></li>
@@ -56,13 +83,14 @@
       </div>
      </li>
      <li>
+
       <div tabindex="0" class="menu__item onclick-menu">Get In touch
         <ul class="onclick-menu-content">
             <li><a class="menu__item menu__item_sub" href="#">email-: mark.d.sheard@gmail.com</a></li>
 
         </ul>
-      </div>
-     </li>
+      </div> 
+     </li> -->
      <!-- <li><a class="menu__item" href="#">SandBox</a></li> -->
      <!-- <li><a class="menu__item" href="#">Get In touch</a></li> -->
    </ul>

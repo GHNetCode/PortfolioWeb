@@ -25,11 +25,15 @@
     top: 0;
     transform: rotate(90deg);
   }
-  #menu__toggle:checked ~ .menu__box {
+
+  /*  When checked\toggled display .menuBox*/
+  #menu__toggle:checked ~ .menuBox {
     /* left: 0 !important; */
     /* left: 0; */
     display: block;
   }
+
+  
   .menu__btn {
     position: fixed;
     top: 20px;
@@ -67,7 +71,10 @@
   .menu__btn > span::after {
     content: '';
     top: 6px;  }
-  .menu__box {
+
+
+    /* Temporarily enable !!!! */
+  .menuBox {
     display: none;/*none / block*/
     position: fixed;
     /* top: -145vh; */
@@ -83,77 +90,172 @@
     z-index: 2;
     /* hide blue active btn on touchscreen */
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent;}
-  .menu__item {
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+  }
+  
+  .menu__aItem{
     display: block;
     padding: 8px 20px;
+    margin: 0;
     color: #b5ae8d;/*b5ae8d*/
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Instrument Serif', serif;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
-    transition:  0.25s ease-out;
+    /* transition:  0.25s ease-out; */
     cursor: pointer;
   }
-  .menu__item:hover {
-    background-color: #ca913b34; 
-    color: #b7916c;
-    /*border-radius:10px;*/ /*4px*/
-    }
 
   
+  #subMBtn4Email{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
 
-    .onclick-menu:focus {
-      /* clicking on label should toggle the menu */
-      /* pointer-events: none; */ /*WATCH*/
-     background-color:unset; /*unselect background once open..*/
-     border-left:solid rgba(207, 147, 69, 0.874) 2px;
-     color: #c97b2d
+  #copyCopiedBtn{
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 70%;
+    margin-bottom: 4px;
+    padding: 3px 2px;
+    color: #b5ae8d; 
+    background: #9c7a0a;
+    box-shadow:inset 1px 1px 15px #522501ba;
+  }
+
+  /* .copyCopiedBtn:active { 
+    background-color: rgb(156, 81, 10);
+  }
+  .copyCopiedBtn:active ::after { 
+    background-color: rgb(99, 49, 3);
+
+#menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  } */
+
+  /*after active state below using JS to keep
+  background color the same
+  */ 
+  #copyCopiedBtn:active{ 
+    background: #9c510a;
   }
   
-    .onclick-menu:focus .onclick-menu-content {
-        /*  opacity is 1 in opened state (see below) */
-        opacity: 1;
-        /* visibility: visible; */
-        display: flex;
-        flex-direction: column;
-        width: 82svw;
-        background-image: linear-gradient(to top, rgba(65, 53, 17, 0.432) , rgba(44, 31, 11, 0.24));
-        border-radius:15px;
-        border-left:solid burlywood 1px;
-        /* padding: 1px 0px; */
-        /* don't let pointer-events affect descendant elements */
-        /* border: solid rgb(71, 66, 27) 2px; */
+  
 
-
-        /* pointer-events: auto;  /*WATCH*/
-       
+ 
+    /* change color on hover */
+    .menu__aItem:hover,.menu__item_P:hover,.menu__item_C:hover {
+      background-color: #ca913b34; 
+      color: #b7916c;
+      transition: 0.25s ;
     }
 
-  .onclick-menu-content {
-    /* use opacity to fake immediate toggle */
+
+
+  /*Initially hide listItem*/
+   .listItem{
     display: none; 
-     opacity: 1;/**/
-     /* visibility: hidden;  */
- }
- .onclick-menu-content li{
-   list-style: none; /*hide the dots infront..*/
- }
+    /* padding: 1rem; */	
+  }
+
+  /* .subMenuBtn1,.subMenuBtn2, */
+   .listItem.active{
+    display: block; /* block / none */	
+    /* padding: 1rem; */
+    /* padding: 8px 20px; */
+    margin-bottom: 2px;
+    background-color: #30211297; 
+    opacity: 0;/* HIDE initial animation.. */
+    border-radius: 15px;
+    animation: fade_in_2 calc(0.07s*5) cubic-bezier(.14,.18,.16,1.02)forwards ;
+  }
+
+.menuBoxAnimate .listItem:nth-of-type(1) {animation-delay: 0.00s;}
+.menuBoxAnimate .listItem:nth-of-type(2) {animation-delay: 0.05s;}
+.menuBoxAnimate .listItem:nth-of-type(3) {animation-delay: 0.10s;}
+.menuBoxAnimate .listItem:nth-of-type(4) {animation-delay: 0.15s;}
+.menuBoxAnimate .listItem:nth-of-type(5) {animation-delay: 0.20s;}
+@keyframes fade_in_2 {
+	from {
+		opacity: 0%;
+		transform: translateX(-100%) scale(0%);
+	}
+	to {
+		opacity: 100%;
+		transform: translateX(0%) scale(100%);
+	}
+}
+
+
+  
+
+	
+
+
+
+	
  
 
-  .menu__item_sub{
-    font-size: 18px;
-    font-weight: 4;
-     padding: 4px 42px; /*top/right*/ 
-  }
+
+	
+/* Change this in order to change the Dropdown symbol */
+/* li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; } */
+
+
+
+   /* @media (hover: hover) and (pointer: fine){  */
+   /* .onclick-menu-content:focus .menu__item_sub:hover{
+    border:2px rgb(181, 229, 255) solid;
+    box-shadow:inset 1px 1px 15px #7bf7f7;
+    transition: all 0.2s ease-out;
+    } */
+  /* } */
+
+
+    /* #menu__item_sub1:active{
+      border:1px #7bf7f7 solid;
+      box-shadow:inset 0px 0px 25px #ffffff;
+     } */
+
+/* 
+ .onclick-menu-content  .menu__item_sub:after{ 
+    color: rgb(0, 162, 255);
+    transform: translateX(0px);
+    transition:  ease-out 0.91s;
+    pointer-events: none;
+  } */
+      
+   
+  /* .onclick-menu:focus  */
+  /* .onclick-menu:focus .onclick-menu-content:focus .menu__item_sub:after { 
+    animation: fadeOut 2s;
+      }
+  .onclick-menu:focus .onclick-menu-content:focus .menu__item_sub:active:after { 
+    color:red;
+       transition: 2s;
+      } */
 
  
   /* animation: fadeOut 2s; */
-  @keyframes fadeOut {
+  /* @keyframes fadeOut {
     from { opacity: 1; }
     to { opacity: 0; }
-}
+} */
    
 
   
