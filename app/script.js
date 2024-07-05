@@ -124,7 +124,10 @@ if ('onpointerdown' in window){
             subMenu4listItems.forEach(lstItem => {
               lstItem.classList.toggle('active');
             })} 
-                if (elementId==="copyCopiedBtn"){ 
+
+            
+
+                if (elementId==="copyCopiedBtn"&&copyCopiedBtn.innerText==='Copy'){ 
                   console.log("copyCopiedBtn pushed ");
                   //copyTextElem();
 
@@ -146,10 +149,6 @@ if ('onpointerdown' in window){
                 } catch (err) {
                   console.log('Oops, unable to copy');
                 }
-                 
-
-
-               
               }
 
 })}
